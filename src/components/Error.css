@@ -1,0 +1,95 @@
+.error-container {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+}
+
+.error-card {
+  width: 100%;
+  max-width: 400px;
+
+  padding: 40px 30px;
+
+  text-align: center;
+
+  border-radius: 20px;
+
+  background: white;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+
+  animation: errorPop 0.5s ease;
+}
+
+.error-icon {
+  font-size: 70px;
+  margin-bottom: 15px;
+
+  animation: shake 1.5s infinite;
+}
+
+.error-card h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.error-card p {
+  font-size: 17px;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.error-card button {
+  border: none;
+  padding: 12px 25px;
+
+  border-radius: 25px;
+
+  font-size: 16px;
+  cursor: pointer;
+
+  background: #ff6b81;
+  color: white;
+
+  transition: transform 0.2s ease;
+}
+
+.error-card button:hover {
+  transform: scale(1.05);
+}
+
+.error-card button:active {
+  transform: scale(0.95);
+}
+
+@keyframes errorPop {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-8deg);
+  }
+
+  75% {
+    transform: rotate(8deg);
+  }
+}
